@@ -43,5 +43,6 @@ func main() {
 	}
 	grpcServer := grpc.NewServer(opts...)
 	pb.RegisterUserServiceServer(grpcServer, &server.UserServiceServer{})
+	log.Printf("Starting server on port %d", *port)
 	grpcServer.Serve(lis)
 }

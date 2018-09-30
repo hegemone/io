@@ -3,7 +3,7 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library")
 go_library(
     name = "go_default_library",
     srcs = ["server.go"],
-    importpath = "github.com:hegemone/io/pkg/server",
+    importpath = "github.com/hegemone/io/pkg/server",
     visibility = ["//visibility:public"],
-    deps = ["@com_github_hegemone_io//pkg/user:go_default_library"],
+    deps = ["//pkg/user:go_default_library"],
 )
